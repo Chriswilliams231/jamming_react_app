@@ -23,7 +23,7 @@ class App extends React.Component {
     }
     this.addTrack = this.addTrack.bind(this);
   }
-
+  //adds music to the playlist
   addTrack(track) {
     let tracks = this.state.playlistTracks;
     if (tracks.find(savedTrack => savedTrack.id === tracks.id)) {
@@ -32,6 +32,9 @@ class App extends React.Component {
 
     tracks.push(track);
     this.setState({ playlistTracks: tracks })
+  }
+  removeTrack(track) {
+
   }
   render() {
     return (
